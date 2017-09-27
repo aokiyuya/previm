@@ -86,8 +86,8 @@
     if (needReload && (typeof getContent === 'function') && (typeof getFileType === 'function')) {
       var beforePageYOffset = _win.pageYOffset;
       _doc.getElementById('preview').innerHTML = transform(getFileType(), getContent());
-      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
-      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+      // MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+      // MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
       mermaid.init();
       Array.prototype.forEach.call(_doc.querySelectorAll('pre code'), hljs.highlightBlock);
